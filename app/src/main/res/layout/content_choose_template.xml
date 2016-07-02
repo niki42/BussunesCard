@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.niki.newapp.ChooseTemplate"
+    tools:showIn="@layout/activity_choose_template">
+    <android.support.v7.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="172dp"
+        android:id="@+id/card1"
+        app:cardElevation="10dp"
+        android:onClick="chooseTemplate1"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp">
+            <ImageView
+                android:src="@drawable/images"
+                android:layout_width="60dp"
+                android:layout_margin="10dp"
+                android:id="@+id/logo"
+                android:layout_height="60dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/comName"
+                android:textSize="20sp"
+                android:text="Company Name"
+                tools:ignore="RtlCompat"
+                android:layout_alignParentTop="true"
+                android:layout_toEndOf="@+id/logo" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/logo"
+                android:layout_below="@+id/comName"
+                android:id="@+id/bus_title"
+                android:textSize="15sp"
+                android:text="Bussiness Title" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/logo"
+                android:layout_below="@+id/bus_title"
+                android:id="@+id/web"
+                android:textSize="15sp"
+                android:text="Website"
+                />
+
+
+            <ImageView
+                android:src="@drawable/images"
+                android:layout_width="40dp"
+                android:id="@+id/photo"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/_name"
+                android:layout_alignStart="@+id/logo" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/photo"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/web"
+                android:id="@+id/_name"
+                android:textSize="20sp"
+                android:text="Person Name" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/photo"
+                android:layout_below="@+id/_name"
+                android:id="@+id/desig"
+                android:textSize="15sp"
+                android:text="Designation" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/phoneN"
+                android:textSize="15sp"
+                android:text="Phone Number"
+                android:layout_alignBottom="@+id/photo"
+                android:layout_toEndOf="@+id/photo" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/postalAdress"
+                android:textSize="15sp"
+                android:text="Postal Adress"
+                android:textAlignment="center"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp" />
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="170dp"
+        android:id="@+id/card2"
+        app:cardElevation="10dp"
+        android:onClick="chooseTemplate2"
+        android:layout_gravity="center"
+        android:layout_margin="10dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="10dp">
+            <ImageView
+                android:src="@drawable/images"
+                android:layout_width="60dp"
+                android:layout_margin="10dp"
+                android:id="@+id/logo1"
+                android:layout_height="60dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/logo1"
+                android:layout_marginTop="10dp"
+                android:id="@+id/comName1"
+                android:textSize="20sp"
+                android:text="Company Name" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/logo1"
+                android:layout_below="@+id/comName1"
+                android:id="@+id/bus_title1"
+                android:textSize="15sp"
+                android:text="Bussiness Title" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/logo1"
+                android:layout_below="@+id/bus_title1"
+                android:id="@+id/website1"
+                android:textSize="15sp"
+                android:text="Website"
+                />
+
+
+            <ImageView
+                android:src="@drawable/images"
+                android:layout_width="40dp"
+                android:id="@+id/photo2"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/_name1"
+                android:layout_alignParentEnd="true" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/_name1"
+                android:textSize="20sp"
+                android:text="Person Name"
+                android:layout_below="@+id/logo1"
+                android:layout_alignStart="@+id/logo1"
+                android:layout_toStartOf="@+id/photo2"
+                android:textAlignment="viewEnd" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/desig1"
+                android:textSize="15sp"
+                android:text="Designation"
+                android:layout_alignTop="@+id/photo2"
+                android:layout_alignEnd="@+id/_name1"
+                android:layout_alignStart="@+id/_name1"
+                android:textAlignment="textEnd" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/phoneNum1"
+                android:inputType="phone"
+                android:textSize="15sp"
+                android:text="Phone Number"
+                android:layout_alignBottom="@+id/photo2"
+                android:layout_toStartOf="@+id/photo2"
+                android:textAlignment="viewEnd" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/postalAdress1"
+                android:textSize="15sp"
+                android:text="Postal Adress"
+                android:textAlignment="center"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
