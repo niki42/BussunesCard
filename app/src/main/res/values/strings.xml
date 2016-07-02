@@ -16,4 +16,5 @@
     <string name="designation">designation</string>
     <string name="name">name</string>
     <string name="welcome_message">\" Welcome to create your bussiness card \"</string>
+    <string name="edit">edit</string>
 </resources>

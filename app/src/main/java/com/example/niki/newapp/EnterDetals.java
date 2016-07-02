@@ -48,17 +48,19 @@ public class EnterDetals extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if(resultCode == RESULT_LOAD_IMG) {
-            if (resultCode == RESULT_LOAD_IMG && resultCode == RESULT_OK && null != data) {
+            if (resultCode == RESULT_OK && null != data) {
 
                 Uri selectedImage = data.getData();
                 String[] filePathColumn = {MediaStore.Images.Media.DATA};
                 //get the cursor
                 Cursor cursor = getContentResolver().query(selectedImage, filePathColumn, null, null, null);
                 //move to first row
+                assert cursor != null;
                 int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
                 imgDecodableString = cursor.getString(columnIndex);
                 cursor.close();
                 ImageView imgView = (ImageView) findViewById(R.id.persnphoto);
+                assert imgView != null;
                 imgView.setImageBitmap(BitmapFactory.decodeFile(imgDecodableString));
             } else {
                 Toast.makeText(EnterDetals.this, "You have't picked Image",
@@ -67,17 +69,19 @@ public class EnterDetals extends AppCompatActivity {
         }
 
         if(resultCode == RESULT_LOAD_LOGO) {
-            if (resultCode == RESULT_LOAD_LOGO && resultCode == RESULT_OK && null != data) {
+            if (resultCode == RESULT_OK && null != data) {
 
                 Uri selectedImage = data.getData();
                 String[] filePathColumn = {MediaStore.Images.Media.DATA};
                 //get the cursor
                 Cursor cursor = getContentResolver().query(selectedImage, filePathColumn, null, null, null);
                 //move to first row
+                assert cursor != null;
                 int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
                 imgDecodableString = cursor.getString(columnIndex);
                 cursor.close();
                 ImageView imgView = (ImageView) findViewById(R.id.logo);
+                assert imgView != null;
                 imgView.setImageBitmap(BitmapFactory.decodeFile(imgDecodableString));
             } else {
                 Toast.makeText(EnterDetals.this, "You have't picked Image",

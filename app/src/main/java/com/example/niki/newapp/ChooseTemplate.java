@@ -23,7 +23,9 @@ public class ChooseTemplate extends AppCompatActivity {
     }
     public void chooseTemplate1(View view){
         card1= (CardView) findViewById(R.id.card1);
-        card1.setDrawingCacheEnabled(true);
+        if (card1 != null) {
+            card1.setDrawingCacheEnabled(true);
+
         card1.buildDrawingCache();
         Bitmap bm = card1.getDrawingCache();
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
@@ -32,11 +34,13 @@ public class ChooseTemplate extends AppCompatActivity {
         Intent putBitmap= new Intent(ChooseTemplate.this,CardPreview.class);
         putBitmap.putExtra("image",byteArray);
         startActivity(putBitmap);
+        }
     }
 
     public void chooseTemplate2(View view){
         card2= (CardView) findViewById(R.id.card2);
-        card2.setDrawingCacheEnabled(true);
+        if (card2 != null) {
+            card2.setDrawingCacheEnabled(true);
         card2.buildDrawingCache();
         Bitmap bm1 = card2.getDrawingCache();
         ByteArrayOutputStream stream = new ByteArrayOutputStream();
@@ -45,6 +49,7 @@ public class ChooseTemplate extends AppCompatActivity {
         Intent putBitmap= new Intent(ChooseTemplate.this,CardPreview.class);
         putBitmap.putExtra("image",byteArray);
         startActivity(putBitmap);
+    }
     }
 
 }

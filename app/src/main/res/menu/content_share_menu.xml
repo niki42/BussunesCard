@@ -6,7 +6,6 @@
         android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:title="@string/setBackground"
-        android:onClick="setBackground"
         app:showAsAction="never" />
     <item
         android:id="@+id/share"
@@ -18,8 +17,7 @@
         android:id="@+id/edit"
         android:icon="@drawable/ic_edit"
         android:orderInCategory="100"
-        android:title="edit"
-        android:onClick="editDetails"
+        android:title="@string/edit"
         app:showAsAction="ifRoom"/>
 
 </menu>
